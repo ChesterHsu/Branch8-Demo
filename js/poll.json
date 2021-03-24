@@ -1,0 +1,84 @@
+{
+  "polls": [
+    {
+      "id": 1,
+      "title": "Is bitcoin worth the time and money that mining requires?",
+      "publishedDate": 1516605447,
+      "answer": {
+        "type": "Single",
+        "options": [
+          {
+            "id": 1,
+            "numberOfVoters" : 20,
+            "label": "Yes"
+          },
+          {
+            "id": 2,
+            "numberOfVoters" : 20,
+            "label": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Should chatbots replace humans in customer service jobs?",
+      "publishedDate": 1516000647,
+      "answer": {
+        "type": "Single",
+        "options": [
+          {
+            "id": 3,
+            "numberOfVoters" : 23,
+            "label": "Yes"
+          },
+          {
+            "id": 4,
+            "numberOfVoters" : 41,
+            "label": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "How are we feeling about 2018?",
+      "publishedDate": 1515568647,
+      "answer": {
+        "type": "Single",
+        "options": [
+          {
+            "id": 5,
+            "numberOfVoters" : 33,
+            "label": "Hopeful"
+          },
+          {
+            "id": 6,
+            "numberOfVoters" : 61,
+            "label": "Doubtful"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Will new benefits encourage you to study or work in mainland?",
+      "publishedDate": 1515309447,
+      "answer": {
+        "type": "Single",
+        "options": [
+          {
+            "id": 7,
+            "numberOfVoters" : 91,
+            "label": "Yes"
+          },
+          {
+            "id": 8,
+            "numberOfVoters" : 23,
+            "label": "No"
+          }
+        ]
+      }
+    }
+  ]
+}

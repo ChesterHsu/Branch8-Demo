@@ -1,0 +1,27 @@
+@mixin note-book{
+  @media (max-width: 1200px) {
+    @content
+  }
+}
+@mixin mini-note-book{
+  @media (max-width: 900px) {
+    @content
+  }
+}
+@mixin pad{
+  @media (max-width: 700px) {
+    @content
+  }
+}
+
+@mixin phone{
+  @media (max-width: 567px) {
+    @content
+  }
+}
+
+@mixin min-phone{
+  @media (max-width: 320px) {
+    @content
+  }
+}

@@ -1,0 +1,197 @@
+@import "assets/mixin/grid";
+
+.index{
+  max-width: 800px;
+  margin:0px auto;
+  .warp{
+    width: 100%;
+    height: 350px;
+    background: #dbdbdb;
+    padding: 12px 12px 47px 12px;
+    margin-bottom: 21px;
+    @include pad() {
+      height: 500px;
+    }
+    .hideDashboardWarning{
+      font-size: 40px;
+      margin: 50px auto;
+      color: red;
+    }
+    .dashboard-warp{
+      float: right;
+      @include pad() {
+        float: none;
+        position: absolute;
+        top: 190px;
+        right: 300px;
+        z-index: 100;
+      }
+      @include phone() {
+        right: 50px;
+      }
+      .per-cent-number{
+        width: 230px;
+        float: left;
+        z-index: 10;
+        position: absolute;
+        top: 110px;
+        p{
+          width: 60px;
+          font-size: 28px;
+          font-weight:bold;
+          color: white;
+          margin: 0px;
+          padding: 0px;
+        }
+        .agree-number{
+          float: left;
+          margin-left: 15px;
+        }
+        .disagree-number{
+          float: right;
+          margin-right: 5px;
+        }
+        .per-cent{
+          position: relative;
+          z-index: 10;
+          bottom: 38px;
+          left: 95px;
+          font-size: 50px;
+          @include pad() {
+            bottom: 50px;
+          }
+        }
+      }
+      .dashboard{
+        max-width: 230px;
+        width: 100%;
+        max-height: 230px;
+        height: 100%;
+        float: right;
+        background: #e46c2c;
+        border-radius: 150%;
+        circle{
+          stroke-dasharray: 596;
+        }
+      }
+    }
+    .title{
+      float: left;
+      @include pad() {
+        display: none;
+      }
+      img{
+        float: left;
+        margin-right: 7px;
+      }
+      h3{
+        float: left;
+        font-weight:bold;
+        font-size: 20px;
+        color: #26658f;
+      }
+    }
+    .content{
+      margin-top: 20px;
+      margin-left: 10px;
+      max-width: 500px;
+      width: 100%;
+      @include pad() {
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+      h3{
+        font-size: 20px;
+        display : inline;
+      }
+      p{
+        font-size: 11px;
+        color: #26658f;
+        font-weight:bold;
+        margin: 0px;
+        width: 100px;
+        display : inline;
+        @include pad() {
+          display: none;
+        }
+      }
+    }
+    .vote-btn{
+      padding-top: 33px;
+      padding-left: 37px;
+      margin-bottom: 48px;
+      @include pad() {
+        padding-top: 10px;
+        padding-left: 0px;
+        margin-bottom: 0px;
+      }
+      button{
+        width: 75px;
+        margin-bottom: 6px;
+        padding: 10px;
+        color: white;
+        border: 0px;
+        font-weight:bold;
+        cursor: pointer;
+      }
+      .agree-btn{
+        background: #e57435;
+      }
+      .disagree-btn{
+        background: #133b6b;
+      }
+    }
+    .number-of-voters{
+      margin-bottom: 23px;
+      @include pad() {
+        margin-top: 300px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+    hr{
+      border:1px #cccccc dotted;
+      @include pad() {
+        display: none;
+      }
+    }
+  }
+  .survey-content{
+    cursor: pointer;
+    width: 50%;
+    height: 110px;
+    padding: 12px 11px 0px;
+    border-right: 2px #cccccc solid;
+    float: left;
+    @include mini-note-book() {
+      width: 100%;
+    }
+    .content{
+      width: 100%;
+      height: 100%;
+      border-bottom: 1px #cccccc dashed;
+      img{
+        float: left;
+      }
+      p{
+        float: left;
+        margin-left: 10px;
+        font-size: 11px;
+        color: #26658f;
+        font-weight:bold;
+      }
+      h3{
+        width: 283px;
+        font-size: 16px;
+        margin-left: 10px;
+        float: left;
+        margin-bottom: 18px;
+        @include mini-note-book() {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+

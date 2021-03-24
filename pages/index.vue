@@ -1,73 +1,72 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        Branch8-demo
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="index">
+    <div class="warp" v-if="!showDashboard">
+      <h3 class="hideDashboardWarning">
+        There are no voting items,
+      </h3>
+      <h3 class="hideDashboardWarning">
+        please select the following area to choose
+      </h3>
+    </div>
+    <div class="warp" v-if="showDashboard">
+      <div class="dashboard-warp">
+        <div class="per-cent-number">
+          <p class="agree-number">{{ agreeType.numberOfVoters }}</p>
+          <p class="disagree-number">{{ disagreeType.numberOfVoters }}</p>
+          <p class="per-cent">%</p>
+        </div>
+        <svg class="dashboard" width="230" height="230">
+          <circle
+            fill="none"
+            stroke="#133b6b"
+            stroke-width="100"
+            :transform="dashboardAngle"
+            :stroke-dashoffset="dashboardPerCent"
+            cx="115"
+            cy="115"
+            r="95"
+          >
+          </circle>
+          <circle
+            class="test"
+            fill="#dbdbdb"
+            cx="115"
+            cy="115"
+            r="45"
+          >
+          </circle>
+        </svg>
+      </div>
+      <div class="title">
+        <img src="@/assets/images/logo.png">
+        <h3>Today's Poll</h3>
+      </div>
+      <br>
+      <div class="content">
+        <h3>{{ dashboardData.title }}</h3>
+        <p>17 JAN 2018</p>
+      </div>
+      <div class="vote-btn">
+        <button class="agree-btn" @click="agreeBtn">{{ agreeType.label }}</button>
+        <br/>
+        <button class="disagree-btn" @click="disagreeBtn">{{ disagreeType.label }}</button>
+      </div>
+      <div class="number-of-voters">
+        <p>Total number of voters recorded: {{ totalVotes }}</p>
+      </div>
+      <hr size="1"/>
+    </div>
+    <div class="survey-content" v-for="item in polls" @click="setPolls(item)">
+      <div class="content">
+        <img src="@/assets/images/dashboard-image.png">
+        <p>15 JAN 2018</p>
+        <br />
+        <h3>{{ item.title }}</h3>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {}
+<script src="../js/pages/index.js">
+
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
